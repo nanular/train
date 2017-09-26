@@ -11,7 +11,16 @@
 		integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
 		crossorigin="anonymous">
 
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">	
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+		<!-- Moment.js-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+
+		<!-- Firebase -->
+		<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	</head>
 
@@ -25,10 +34,10 @@
 
 	<div class="card">
 		<div class="card-header">
-			<h2 class="card-title">Train Schedule</h2>
+			<h3 class="card-title">Train Schedule</h2>
 		</div>
 		<div class="card-body">
-			<table class="table table-striped" id="train_table">
+			<table class="table table-striped">
 				<thead class="thead-inverse">
 					<tr>
 			      	<th>Current Train Schedule</th>
@@ -38,35 +47,8 @@
 						<th>Minutes Away</th>
 					</tr>
 				</thead>
-				<tbody>
-					<tr>
-			      	<th>Current Train Schedule</th>
-			      	<th>Destination</th>
-			        	<th>Frequency</th>
-						<th>Next Arrival</th>
-						<th>Minutes Away</th>
-					</tr>
-					<tr>
-			      	<th>Current Train Schedule</th>
-			      	<th>Destination</th>
-			        	<th>Frequency</th>
-						<th>Next Arrival</th>
-						<th>Minutes Away</th>
-					</tr>
-					<tr>
-			      	<th>Current Train Schedule</th>
-			      	<th>Destination</th>
-			        	<th>Frequency</th>
-						<th>Next Arrival</th>
-						<th>Minutes Away</th>
-					</tr>
-					<tr>
-			      	<th>Current Train Schedule</th>
-			      	<th>Destination</th>
-			        	<th>Frequency</th>
-						<th>Next Arrival</th>
-						<th>Minutes Away</th>
-					</tr>				
+				<tbody id="train_table">
+					
 				</tbody>
 			</table>
 		</div>  <!-- end of card-body class -->   
@@ -76,18 +58,18 @@
 			
 	<div class="card">
 		<div class="card-header">
-			<h2 class="card-title">Add Train</h2>
+			<h3 class="card-title">Add Train</h2>
 		</div>
 		<div class="card-body">
 			<form>  
-				<input type="text" placeholder="Train Name" id="address_street1">
-				<input type="text" placeholder="Destination" id="address_street2">
-				<input type="text" placeholder="First Train Time (hh:mm)" id="address_city">
-				<input type="text" placeholder="Frequency (Minutes)" id="address_state">
+				<input type="text" placeholder="Train Name" id="train_name">
+				<input type="text" placeholder="Destination" id="train_destination">
+				<input type="text" placeholder="First Train Time (hh:mm)" id="train_time">
+				<input type="text" placeholder="Frequency (Minutes)" id="train_frequency">
 
 			<div class="form_buttons">
-				<input type="submit" name="Submit" class="btn btn-primary" id="train_submit">
-				<input type="reset" name="Clear" class="btn btn-warning" id="clear_button">
+				<input type="submit" name="Submit" value="Add Train" class="btn btn-primary" id="train_submit">
+				<input type="reset" name="Clear" value="Clear" class="btn btn-warning" id="clear_button">
 			</div>
 
 			</form>
@@ -109,22 +91,6 @@
 
 	</div>  <!-- end of container class -->
 
-
-
-
-
-
-
-
-	
-	<!-- Moment.js-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
-
-	<!-- Firebase -->
-	<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
-
-	<!-- jQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	
 	<!-- Popper.js -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" 
