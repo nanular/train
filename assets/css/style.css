@@ -1,0 +1,29 @@
+.train_table
+{
+
+}
+
+
+.card-header, .jumbotron
+{
+	background-color: cornflowerblue;
+}
+
+
+input
+{
+	padding: 7px;
+	margin: 7px;
+	width: 100%;
+	border-radius: 5px;
+}
+
+input[type="text"]
+{
+	background-color: #FAF6D9;
+}
+
+input[type="text"]:focus
+{
+	background-color: white;
+}
