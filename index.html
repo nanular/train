@@ -28,8 +28,8 @@
 	
 	<div class="container">
 		<div class="jumbotron">
-			<h1 class="text-center display-2">Scheduler In Training</h1>
-			<h2 class="text-center">Another Heading</h2>
+			<h1 class="text-center display-2">Training Schedule</h1>
+			<h2 class="text-center">Train Game</h2>
 		</div>
 
 	<div class="card">
@@ -61,11 +61,14 @@
 			<h3 class="card-title">Add Train</h2>
 		</div>
 		<div class="card-body">
-			<form>  
-				<input type="text" placeholder="Train Name" id="train_name">
-				<input type="text" placeholder="Destination" id="train_destination">
-				<input type="text" placeholder="First Train Time (hh:mm)" id="train_time">
-				<input type="text" placeholder="Frequency (Minutes)" id="train_frequency">
+			<form>
+
+			<div id="database_items"> 
+				<input type="text" placeholder="Train Name" id="train_name" class="invalid">
+				<input type="text" placeholder="Destination" id="train_destination" class="invalid">
+				<input type="text" placeholder="First Train Time (hh:mm) [Use Military Time]" id="train_time" class="invalid">
+				<input type="text" placeholder="Frequency (Minutes)" id="train_frequency" class="invalid">
+			</div>
 
 			<div class="form_buttons">
 				<input type="submit" name="Submit" value="Add Train" class="btn btn-primary" id="train_submit">
